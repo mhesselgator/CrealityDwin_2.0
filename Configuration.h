@@ -16,7 +16,7 @@
 //#define MachineCR10SProV2 // Second Gen 10S Pro with BLTouch wired to Z Max
 //#define MachineCRX
 //#define MachineCRXPro
-//#define MachineCR10Max
+#define MachineCR10Max
 //#define MachineS4
 //#define MachineS5
 //#define MachineCR2020 // Industrial Series 2020
@@ -1605,7 +1605,7 @@
      #define NOZZLE_TO_PROBE_OFFSET { -44, -10, 0 }
    #endif
 #elif ANY(MachineCR10SPro, MachineCR10Max) && ENABLED(HotendStock) && DISABLED(MicroswissDirectDrive)
-  #define NOZZLE_TO_PROBE_OFFSET { -27, 0, 0 }
+  #define NOZZLE_TO_PROBE_OFFSET { -38, 6, -1.17 }  //Changed from -27, 0, 0 due to Hero Me
 #elif (ANY(ABL_BLTOUCH, ABL_EZABL,ABL_NCSW) && ENABLED(E3DHemera))
     #define NOZZLE_TO_PROBE_OFFSET { -40, 0, 0 }
 #elif ENABLED(MachineCR10SV2)
@@ -1919,10 +1919,10 @@
     #define Y_MAX_POS 400
     #define ClipClearance 15
   #elif ENABLED(MachineCR10Max)
-    #define X_BED_SIZE 450
+    #define X_BED_SIZE 467  //Changed from 450
     #define Y_BED_SIZE 450
     #define Z_MAX_POS 470
-    #define X_MAX_POS 450
+    #define X_MAX_POS 467  //Changed from 450
     #define Y_MAX_POS 450
     #define ClipClearance 15
   #elif ENABLED(MachineS5)
