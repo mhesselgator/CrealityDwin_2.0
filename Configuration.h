@@ -46,12 +46,12 @@
 */
 //#define HotendStock
 //#define HotendE3D
-//#define HotendMosquito
+#define HotendMosquito  //Removed Comments from this line
 
 //Enable this if you have an all metal hotend capable of 300c
-#ifndef HotendAllMetal
-  #define HotendAllMetal
-#endif
+//#ifndef HotendAllMetal  //Commented out this line
+//  #define HotendAllMetal  //Commented out this line
+//#endif  //Commented out this line
 
 // Enable this if you used a plug and play creality e3d or mosquito kit and kept the Creality thermistor
 //#define CrealityThermistor
@@ -61,7 +61,7 @@
  */
 
  //#define EZRstruder
- //#define Bondtech
+ #define Bondtech  //Removed Comments from this line
  //#define E3DTitan
  //#define E3DHemera
  //#define CrealityTitan
