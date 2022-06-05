@@ -323,6 +323,7 @@
   #endif
 #endif
 
+//  This area defines the ABL_BLTOUCH, the Bed as DC and the lerdgeFilSensor
 #if ENABLED(MachineCR10Max)
   #if NONE(ABL_NCSW, ABL_EZABL, ABL_BLTOUCH)
     #define ABL_BLTOUCH
@@ -366,6 +367,7 @@
   #endif
 #endif
 
+//  This defines the pin used for the ABL_BLTOUCH sensor
 #if ANY(MachineCR10SV2, MachineCR10Max, MachineCR10SProV2) && ANY(ABL_EZABL, ABL_NCSW, ABL_BLTOUCH, ABL_TOUCH_MI) && NONE(SKR13, SKR14, SKR14Turbo, SKRPRO11)
   #define Z_STOP_PIN 19
 #endif
@@ -426,6 +428,7 @@
   #define ABL_BI
 #endif
 
+// May want to redfine the mesh size here
 #if NONE(MeshFast, MeshStd, MeshFine, MeshExtreme)
   #define MeshStd
 #endif
