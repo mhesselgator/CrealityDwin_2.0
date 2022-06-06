@@ -1595,6 +1595,8 @@
  *   (0,0)
  *
  * Specify a Probe position as { X, Y, Z }
+ *
+ * This is where Prob position is decided  I don't think our set up has been decided
  */
 #if ENABLED(MachineCRXPro, HotendStock, ABL_BLTOUCH)
   #define NOZZLE_TO_PROBE_OFFSET { 48, 3, 0 }
@@ -1918,7 +1920,7 @@
     #define X_MAX_POS 410
     #define Y_MAX_POS 400
     #define ClipClearance 15
-  #elif ENABLED(MachineCR10Max)
+  #elif ENABLED(MachineCR10Max)  // THis is where the bed size is decided
     #define X_BED_SIZE 450
     #define Y_BED_SIZE 450
     #define Z_MAX_POS 470
@@ -2024,7 +2026,8 @@
   //#define FIL_RUNOUT_PULLDOWN      // Use internal pulldown for filament runout pins.
 
   // Set one or more commands to execute on filament runout.
-  // (After 'M412 H' Marlin will ask the host to handle the process.)
+  // (After 'M412 H' Marlin will ask the host to handle the process.)  
+  // Where filament runout script is decided
   #define FILAMENT_RUNOUT_SCRIPT "M600"
 
   // After a runout is detected, continue printing this length of filament
