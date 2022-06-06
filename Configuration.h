@@ -331,7 +331,7 @@
   #if DISABLED(ABL_UBL)
     #define ABL_BI
   #endif
-  #define lerdgeFilSensor
+  #define lerdgeFilSensor  //Using lerdge filament sensor, which is polarity of stock Filament sensor)
   #if DISABLED(BedAC)
     #ifndef BedDC
       #define BedDC
@@ -367,7 +367,7 @@
   #endif
 #endif
 
-//  This defines the pin used for the ABL_BLTOUCH sensor
+//  This defines the pin used for the ABL_BLTOUCH sensor becasue we chose the MachineCR10Max
 #if ANY(MachineCR10SV2, MachineCR10Max, MachineCR10SProV2) && ANY(ABL_EZABL, ABL_NCSW, ABL_BLTOUCH, ABL_TOUCH_MI) && NONE(SKR13, SKR14, SKR14Turbo, SKRPRO11)
   #define Z_STOP_PIN 19
 #endif
@@ -424,6 +424,7 @@
   #define HotendStock
 #endif
 
+// This where bilinear is set for the ABL_BLTOUch
 #if ANY(ABL_EZABL, ABL_NCSW, ABL_BLTOUCH, ABL_TOUCH_MI) && NONE(ABL_UBL, ABL_BI)
   #define ABL_BI
 #endif
@@ -822,7 +823,7 @@
 #if ENABLED(ConfigurableThermistors)
   #define TEMP_SENSOR_0 1000
 #elif ENABLED(HotendMosquito)
-  #define TEMP_SENSOR_0 67
+  #define TEMP_SENSOR_0 5  // I changed from 67 to 5 becasue I can't get the cool thermister
 #elif ENABLED(HotendE3D)
   #define TEMP_SENSOR_0 5
 #elif ANY(HotendStock, CrealityThermistor)
@@ -1055,7 +1056,7 @@
  * Note: For Bowden Extruders make this large enough to allow load/unload.
  */
 #define PREVENT_LENGTHY_EXTRUDE
-#define EXTRUDE_MAXLENGTH 750
+#define EXTRUDE_MAXLENGTH 50  //I changed this from 750 to 50 because I'm direct drive now
 
 //===========================================================================
 //======================== Thermal Runaway Protection =======================
@@ -1291,6 +1292,7 @@
  * Default Axis Steps Per Unit (steps/mm)
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2...]]
+ *	This is where the extruder steps are decided
  */
 
 #if ENABLED(CrealityTitan)
@@ -1322,6 +1324,7 @@
 /**
  * Default Max Feed Rate (mm/s)
  * Override with M203
+ * This is where feedrates and accelerations are defined
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4[, E5]]]]]
  */
 #if ENABLED(MachineCR20Pro)
