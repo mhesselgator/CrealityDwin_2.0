@@ -1985,7 +1985,7 @@
     #define FILAMENT_CHANGE_UNLOAD_LENGTH      125
   #elif ANY(MachineEnder5Plus, MachineCR10S4, MachineCR10S5)  // Changed this due to haveing direct drive now
     #define FILAMENT_CHANGE_UNLOAD_LENGTH   700  // Changed this due to haveing direct drive now
-  #elif (MachineCR10Max)  // Changed this due to haveing direct drive now
+  #elif (ENABLED(MachineCR10Max))  // Changed this due to haveing direct drive now
     #define FILAMENT_CHANGE_UNLOAD_LENGTH   50  // Changed this due to haveing direct drive now
   #else
     #define FILAMENT_CHANGE_UNLOAD_LENGTH      430  // (mm) The length of filament for a complete unload.
@@ -2005,7 +2005,7 @@
     #define FILAMENT_CHANGE_FAST_LOAD_LENGTH   450  // (mm) Load length of filament, from extruder gear to nozzle.
   #elif ANY(MachineEnder5Plus, MachineCR10S4, MachineCR10S5) // Changed this due to haveing direct drive now
     #define FILAMENT_CHANGE_FAST_LOAD_LENGTH   600 // Changed this due to haveing direct drive now
-  #elif (MachineCR10Max)                           // Changed this due to haveing direct drive now
+  #elif (ENABLED(MachineCR10Max))                           // Changed this due to haveing direct drive now
     #define FILAMENT_CHANGE_FAST_LOAD_LENGTH   50  // Changed this due to haveing direct drive now
   #else
     #define FILAMENT_CHANGE_FAST_LOAD_LENGTH   430  // (mm) Load length of filament, from extruder gear to nozzle.
